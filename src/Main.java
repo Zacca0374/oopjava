@@ -1,10 +1,16 @@
 public class Main {
     public static void main(String[] args) {
-        Car car = new Car( "Opel Corsa", "Opel",2019);
+        BankAccount.setBankNome("Example Bank");
 
-        System.out.println(car.model);
-        System.out.println(car.manufacturer);
-        System.out.println(car.year);
+        BankAccount account1 = new BankAccount(12345678, 1000.0);
+        account1.deposit(500.0);
+        account1.withdraw(200.0);
+        account1.getAccountInfo();
+        System.out.println();
 
+        BankAccount account2 = new BankAccount(87654321, 2000.0);
+        account2.deposit(1000.0);
+        account2.withdraw(500.0);
+        account2.getAccountInfo();
     }
 }
